@@ -350,7 +350,7 @@ function changeColor()
                     foreach($isiska->result() as $data):                      
                         if($data->Status=="progress"){
                         echo "<tr><td contenteditable='false' style='text-align:center'>
-                        <input type='text' onkeypress='changeColor()' style='text-align:center' name='No' id='No' placeholder='$data->No'  onblur='setValue();'></input></td>";
+                        <input type='text' onkeypress='changeColor()' style='text-align:center' name='No' id='No' value='$data->No' placeholder='$data->No'></input></td>";
                         echo "<td contenteditable='false' style='text-align:center' text-align:center>".$data->Cust_Name."</td>";
                         echo "<td contenteditable='false' style='text-align:center'>".$data->Cust_Ship."</td>";
                         echo "<td contenteditable='false' style='text-align:center'>".$data->City."</td>";
@@ -504,6 +504,7 @@ function changeColor()
     </div>
 
 <script type="text/javascript">
+
     function dataProcess(){   
          alert($("#Status").val());
         $.ajax({
@@ -522,7 +523,8 @@ function changeColor()
             });// you have missed this bracket
         return false;
     }
-    </script>
+
+</script>
 
 
     <!-- /#wrapper -->
